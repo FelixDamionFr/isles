@@ -200,7 +200,7 @@ async def block(interaction:discord.Interaction, block:block_list):
     id = block.replace(' ', '_')
     channel = bot.get_channel(1231482799987625986)
     file = discord.File(
-        fp = f'C:/Users/Admin/Desktop/High Realms/Renders/HighRealms Block {id} 1000x1000.png'
+        fp = f'Renders/HighRealms Block {id} 1000x1000.png'
     )
     message = await channel.send(
         file = file
