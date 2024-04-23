@@ -60,6 +60,7 @@ game_icon = "https://media.discordapp.net/attachments/1180618436972396545/123082
 
 block_list = typing.Literal[
     "Cobblestone",
+    "Diamond Block",
     "Dirt",
     "Gold Ore",
     "Grass",
@@ -72,6 +73,7 @@ block_list = typing.Literal[
     "Oak Planks",
     "Oak Slab",
     "Oak Stairs",
+    "Ruby Block",
     "Sapphire Ore"
 ]
 
