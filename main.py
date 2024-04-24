@@ -326,12 +326,17 @@ async def block(interaction:discord.Interaction, block:str):
 )
 async def autocomplete_callback(interaction:discord.Interaction, current:str):
     list = []
+
     for block in block_list:
-        list.append(app_commands.Choice(
+        list.append(block)
+
+    return [
+        app_commands.Choice(
             name = block,
             value = block
-        ))
-    return list
+        )
+        for block in block_list if current.lower() in block.lower()
+    ]
 
 # Command: /changelog [date]
 @bot.tree.command(
