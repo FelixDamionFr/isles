@@ -58,7 +58,7 @@ game_name = "High Realms"
 game_url = "https://www.roblox.com/groups/33438142"
 game_icon = "https://media.discordapp.net/attachments/1180618436972396545/1230828028024717312/HighRealms_Isles_Icon-1_500x500.png?ex=6634bced&is=662247ed&hm=4fad82fdb54e00c6abefaa243f1f931d61cd0db89d318d48a4d4b4d0195c536d&=&format=webp&quality=lossless"
 
-block_list = typing.Literal[
+block_list = [
     "Cobalt Block",
     "Cobblestone",
     "Diamond Block",
@@ -81,6 +81,8 @@ block_list = typing.Literal[
     "Stone Brick Slab",
     "Stone Brick Stairs"
 ]
+
+changelog_list = []
 
 # Classes
 class ZoomView(ui.View):
@@ -148,7 +150,7 @@ class ZoomButton(ui.Button):
 # Command: /ping
 @bot.tree.command(
     name = "ping",
-    description = "Returns the bot's ping and uptime"
+    description = "Returns the bot's ping and uptime."
 )
 @app_commands.allowed_installs(
     guilds = True,
@@ -178,10 +180,10 @@ async def ping(interaction:discord.Interaction):
         ephemeral = True
     )
 
-# Command: /block [name]
+# Command: /block <name>
 @bot.tree.command(
     name = "block",
-    description = "Get more information on the specified block from High Realms"
+    description = "Get more information on the specified block from High Realms."
 )
 @app_commands.allowed_installs(
     guilds = True,
@@ -203,7 +205,7 @@ async def ping(interaction:discord.Interaction):
     per = 10,
     key = lambda i: (i.guild_id, i.user.id)
 )
-async def block(interaction:discord.Interaction, block:block_list):
+async def block(interaction:discord.Interaction, block:str):
     id = block.replace(' ', '_')
     channel = bot.get_channel(1231482799987625986)
     file = discord.File(
@@ -236,13 +238,81 @@ async def block(interaction:discord.Interaction, block:block_list):
         view = view
     )
 
+@block.autocomplete(
+    name = 'block'
+)
+async def autocomplete_callback(interaction:discord.Interaction, current:str):
+    list = []
+    for block in block_list:
+        list.append(app_commands.Choice(
+            name = block,
+            value = block
+        ))
+    return list
+
+# Command: /changelog [date]
+@bot.tree.command(
+    name = "changelog",
+    description = "Shows you the latest changelog of High Realms. A date can be specified to check a specific update."
+)
+@app_commands.allowed_installs(
+    guilds = True,
+    users = True
+)
+@app_commands.allowed_contexts(
+    guilds = True,
+    dms = True,
+    private_channels = True
+)
+@app_commands.describe(
+    update = "There are no updates yet."
+)
+async def changelog(interaction:discord.Interaction, update:str = None):
+    if update is not None:
+        # Needs to be worked on when the game starts getting updates
+        embed = discord.Embed(
+            title = update,
+            color = 0x2b2d31
+        )
+        embed.set_author(
+            name = game_name,
+            url = game_url,
+            icon_url = game_icon
+        )
+    else:
+        embed = discord.Embed(
+            description = f"No changelogs added yet.",
+            color = 0x2b2d31
+        )
+        embed.set_author(
+            name = game_name,
+            url = game_url,
+            icon_url = game_icon
+        )
+
+    await interaction.response.send_message(
+        embed = embed
+    )
+
+@changelog.autocomplete(
+    name = 'update'
+)
+async def autocomplete_callback(interaction:discord.Interaction, current:str):
+    list = []
+    for update in changelog_list:
+        list.append(app_commands.Choice(
+            name = update,
+            value = update
+        ))
+    return list
+
 # Error: /ping
 @ping.error
 async def on_test_error(interaction:discord.Interaction, error:str):
     if isinstance(error, app_commands.AppCommandError):
         print(error)
 
-# Error: /block [name]
+# Error: /block <name>
 @block.error
 async def on_test_error(interaction:discord.Interaction, error:str):
     if isinstance(error, app_commands.CommandOnCooldown):
@@ -251,6 +321,12 @@ async def on_test_error(interaction:discord.Interaction, error:str):
             ephemeral = True
         )
     else:
+        print(error)
+
+# Error: /changelog [date]
+@changelog.error
+async def on_test_error(interaction:discord.Interaction, error:str):
+    if isinstance(error, app_commands.AppCommandError):
         print(error)
 
 # Run
