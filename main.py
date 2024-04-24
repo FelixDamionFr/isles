@@ -58,29 +58,112 @@ game_name = "High Realms"
 game_url = "https://www.roblox.com/groups/33438142"
 game_icon = "https://media.discordapp.net/attachments/1180618436972396545/1230828028024717312/HighRealms_Isles_Icon-1_500x500.png?ex=6634bced&is=662247ed&hm=4fad82fdb54e00c6abefaa243f1f931d61cd0db89d318d48a4d4b4d0195c536d&=&format=webp&quality=lossless"
 
-block_list = [
-    "Cobalt Block",
-    "Cobblestone",
-    "Diamond Block",
-    "Dirt",
-    "Gold Ore",
-    "Grass",
-    "Iron Ore",
-    "Mangrove Log",
-    "Mangrove Planks",
-    "Mangrove Slab",
-    "Mangrove Stairs",
-    "Oak Leaves",
-    "Oak Log",
-    "Oak Planks",
-    "Oak Slab",
-    "Oak Stairs",
-    "Ruby Block",
-    "Sapphire Ore",
-    "Stone Bricks",
-    "Stone Brick Slab",
-    "Stone Brick Stairs"
-]
+block_list = {
+    "Cobalt Block": {
+        "description": "",
+        "tool": "Pickaxe"
+    },
+
+    "Cobblestone": {
+        "description": "",
+        "tool": "Pickaxe"
+    },
+
+    "Diamond Block": {
+        "description": "",
+        "tool": "Pickaxe"
+    },
+
+    "Dirt": {
+        "description": "",
+        "tool": "Shovel"
+    },
+
+    "Gold Ore": {
+        "description": "",
+        "tool": "Pickaxe"
+    },
+
+    "Grass": {
+        "description": "",
+        "tool": "Shovel"
+    },
+
+    "Iron Ore": {
+        "description": "",
+        "tool": "Pickaxe"
+    },
+
+    "Mangrove Log": {
+        "description": "",
+        "tool": "Axe"
+    },
+
+    "Mangrove Planks": {
+        "description": "",
+        "tool": "Axe"
+    },
+
+    "Mangrove Slab": {
+        "description": "",
+        "tool": "Axe"
+    },
+
+    "Mangrove Stairs": {
+        "description": "",
+        "tool": "Axe"
+    },
+
+    "Oak Leaves": {
+        "description": "",
+        "tool": "Pickaxe"
+    },
+
+    "Oak Log": {
+        "description": "",
+        "tool": "Axe"
+    },
+
+    "Oak Planks": {
+        "description": "",
+        "tool": "Axe"
+    },
+
+    "Oak Slab": {
+        "description": "",
+        "tool": "Axe"
+    },
+
+    "Oak Stairs": {
+        "description": "",
+        "tool": "Axe"
+    },
+
+    "Ruby Block": {
+        "description": "",
+        "tool": "Pickaxe"
+    },
+
+    "Sapphire Ore": {
+        "description": "",
+        "tool": "Pickaxe"
+    },
+
+    "Stone Bricks": {
+        "description": "",
+        "tool": "Pickaxe"
+    },
+
+    "Stone Brick Slab": {
+        "description": "",
+        "tool": "Pickaxe"
+    },
+
+    "Stone Brick Stairs": {
+        "description": "",
+        "tool": "Pickaxe"
+    }
+}
 
 changelog_list = []
 
@@ -217,7 +300,7 @@ async def block(interaction:discord.Interaction, block:str):
 
     embed = discord.Embed(
         title = block,
-        description = "Alta Regna a \"Perforo-ars Caelummassa\" et \"Itercaudices Insulae\" imitantur. Ludi quadratorum sunt, ubi ludificatores in sua insula flante privata, paucis facultatibus, incipiunt. Potestis divitias agricolae, res fabricari, pugnas cum monstris gerere et per periculosas metallas investigare ut gradum superiorem adsequamini et optima reperiam.",
+        description = block_list.get(block)["description"],
         color = 0x2b2d31
     )
     embed.set_author(
