@@ -198,7 +198,7 @@ async def ping(interaction:discord.Interaction):
     block = 'name'
 )
 @app_commands.describe(
-    block = "The name of the block you'd like to know more about"
+    block = "The name of the block you'd like to know more about."
 )
 @app_commands.checks.cooldown(
     rate = 1,
