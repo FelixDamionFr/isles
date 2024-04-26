@@ -59,6 +59,7 @@ game_url = "https://www.roblox.com/groups/33438142"
 game_icon = "https://media.discordapp.net/attachments/1180618436972396545/1230828028024717312/HighRealms_Isles_Icon-1_500x500.png?ex=6634bced&is=662247ed&hm=4fad82fdb54e00c6abefaa243f1f931d61cd0db89d318d48a4d4b4d0195c536d&=&format=webp&quality=lossless"
 
 block_list = typing.Literal[
+    "Bluestone Block",
     "Cobalt Block",
     "Cobblestone",
     "Diamond Block",
@@ -84,6 +85,11 @@ block_list = typing.Literal[
 ]
 
 block_dict = {
+    "Bluestone Block": {
+        "description": "",
+        "tool": "Pickaxe"
+    },
+
     "Cobalt Block": {
         "description": "",
         "tool": "Pickaxe"
