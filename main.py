@@ -109,7 +109,7 @@ block_dict = {
         "tool": "Pickaxe"
     },
 
-    "Grass": {
+    "Grass Block": {
         "description": "",
         "tool": "Shovel"
     },
