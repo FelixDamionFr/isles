@@ -325,7 +325,7 @@ async def block(interaction:discord.Interaction, block:block_list):
 
     embed = discord.Embed(
         title = block,
-        description = f"**{block_dict.get(block)["tool"]}** is the appropriate tool to break {block}.",
+        description = f"**{block_dict.get(block)['tool']}** is the appropriate tool to break {block}.",
         color = 0x2b2d31
     )
     embed.set_author(
