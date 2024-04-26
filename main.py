@@ -58,7 +58,32 @@ game_name = "High Realms"
 game_url = "https://www.roblox.com/groups/33438142"
 game_icon = "https://media.discordapp.net/attachments/1180618436972396545/1230828028024717312/HighRealms_Isles_Icon-1_500x500.png?ex=6634bced&is=662247ed&hm=4fad82fdb54e00c6abefaa243f1f931d61cd0db89d318d48a4d4b4d0195c536d&=&format=webp&quality=lossless"
 
-block_list = {
+block_list = typing.Literal[
+    "Cobalt Block",
+    "Cobblestone",
+    "Diamond Block",
+    "Dirt",
+    "Gold Ore",
+    "Grass Block",
+    "Iron Ore",
+    "Mangrove Log",
+    "Mangrove Planks",
+    "Mangrove Slab",
+    "Mangrove Stairs",
+    "Oak Leaves",
+    "Oak Log",
+    "Oak Planks",
+    "Oak Slab",
+    "Oak Stairs",
+    "Ruby Block",
+    "Sapphire Ore",
+    "Stone Brick Slab",
+    "Stone Brick Stairs",
+    "Stone Brick Wall",
+    "Stone Bricks"
+]
+
+block_dict = {
     "Cobalt Block": {
         "description": "",
         "tool": "Pickaxe"
@@ -116,7 +141,7 @@ block_list = {
 
     "Oak Leaves": {
         "description": "",
-        "tool": "Pickaxe"
+        "tool": "Axe"
     },
 
     "Oak Log": {
@@ -288,7 +313,7 @@ async def ping(interaction:discord.Interaction):
     per = 10,
     key = lambda i: (i.guild_id, i.user.id)
 )
-async def block(interaction:discord.Interaction, block:str):
+async def block(interaction:discord.Interaction, block:block_list):
     id = block.replace(' ', '_')
     channel = bot.get_channel(1231482799987625986)
     file = discord.File(
@@ -300,7 +325,7 @@ async def block(interaction:discord.Interaction, block:str):
 
     embed = discord.Embed(
         title = block,
-        description = block_list.get(block)["description"],
+        description = block_dict.get(block)["tool"],
         color = 0x2b2d31
     )
     embed.set_author(
@@ -320,23 +345,6 @@ async def block(interaction:discord.Interaction, block:str):
         embed = embed,
         view = view
     )
-
-@block.autocomplete(
-    name = 'block'
-)
-async def autocomplete_callback(interaction:discord.Interaction, current:str):
-    list = []
-
-    for block in block_list:
-        list.append(block)
-
-    return [
-        app_commands.Choice(
-            name = block,
-            value = block
-        )
-        for block in block_list if current.lower() in block.lower()
-    ]
 
 # Command: /changelog [date]
 @bot.tree.command(
