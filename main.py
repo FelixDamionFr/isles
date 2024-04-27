@@ -331,9 +331,14 @@ async def block(interaction:discord.Interaction, block:block_list):
 
     embed = discord.Embed(
         title = block,
-        description = f"**{block_dict.get(block)['tool']}** is the appropriate tool to break {block}.",
         color = 0x2b2d31
     )
+
+    if "AEIOU".find(block_dict.get(block)["tool"][0]):
+        embed.description = f"A **{block_dict.get(block)['tool'].lower()}** is the appropriate tool to break {block}."
+    else:
+        embed.description = f"An **{block_dict.get(block)['tool'].lower()}** is the appropriate tool to break {block}."
+
     embed.set_author(
         name = game_name,
         url = game_url,
