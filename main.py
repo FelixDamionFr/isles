@@ -54,10 +54,27 @@ bot = Bot() # Set up the bot
 color = 0x6daa41 # Default color for the embeds
 TOKEN = os.getenv('TOKEN') # Bot Token
 
+# Credit
 game_name = "High Realms"
 game_url = "https://www.roblox.com/groups/33438142"
 game_icon = "https://media.discordapp.net/attachments/1180618436972396545/1230828028024717312/HighRealms_Isles_Icon-1_500x500.png?ex=6634bced&is=662247ed&hm=4fad82fdb54e00c6abefaa243f1f931d61cd0db89d318d48a4d4b4d0195c536d&=&format=webp&quality=lossless"
 
+# Types
+CategoryType = {
+    "Building Blocks": "Building Blocks", # CategoryType["Building Blocks"]
+    "Colored Blocks": "Colored Blocks", # CategoryType["Colored Blocks"]
+    "Natural Blocks": "Natural Blocks", # CategoryType["Natural Blocks"]
+    "Functional Blocks": "Functional Blocks", # CategoryType["Functional Blocks"]
+    "Bluestone Blocks": "Bluestone Blocks" # CategoryType["Bluestone Blocks"]
+}
+
+ToolType = {
+    "Pickaxe": "Pickaxe", # ToolType["Pickaxe"]
+    "Axe": "Axe", # ToolType["Axe"]
+    "Shovel": "Shovel" # ToolType["Shovel"]
+}
+
+# Lists & Dictionaries
 block_list = typing.Literal[
     "Bluestone Block",
     "Cobalt Block",
@@ -195,6 +212,8 @@ block_dict = {
         "tool": "Pickaxe"
     }
 }
+
+category_select = []
 
 changelog_list = []
 
