@@ -374,16 +374,20 @@ async def block(interaction:discord.Interaction, block:block_list):
         file = file
     )
 
+    embed = discord.Embed(
+        title = block,
+        color = 0x2b2d31
+    )
     embed.add_field(
         name = "Description",
         value = f" **{block_dict.get(block)['tool'].lower()}** is the appropriate tool to break {block}.",
         inline = False
     )
 
-    if "AEIOU".find(block_dict.get(block)["tool"][0]):
-        embed.fields[0].value = "A" + embed.fields[0].value
+    if "AEIOU".find(block_dict.get(block)['tool'][0]):
+        embed.fields[0].value = f"A **{block_dict.get(block)['tool'].lower()}** is the appropriate tool to break {block}."
     else:
-        embed.fields[0].value = "An" + embed.fields[0].value
+        embed.fields[0].value = f"An **{block_dict.get(block)['tool'].lower()}** is the appropriate tool to break {block}."
 
     embed.set_author(
         name = game_name,
