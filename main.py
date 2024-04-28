@@ -104,112 +104,134 @@ block_list = typing.Literal[
 block_dict = {
     "Bluestone Block": {
         "description": "",
-        "tool": "Pickaxe"
+        "category": CategoryType["Bluestone Blocks"],
+        "tool": ToolType["Pickaxe"]
     },
 
     "Cobalt Block": {
         "description": "",
-        "tool": "Pickaxe"
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
     },
 
     "Cobblestone": {
         "description": "",
-        "tool": "Pickaxe"
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
     },
 
     "Diamond Block": {
-        "description": "",
-        "tool": "Pickaxe"
+        "description": "A **Diamond Block** is a rare mineral block created by using nine diamonds that can be found in **the Mines**.",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
     },
 
     "Dirt": {
         "description": "",
-        "tool": "Shovel"
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Shovel"]
     },
 
     "Gold Ore": {
         "description": "",
-        "tool": "Pickaxe"
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Pickaxe"]
     },
 
     "Grass Block": {
         "description": "",
-        "tool": "Shovel"
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Shovel"]
     },
 
     "Iron Ore": {
         "description": "",
-        "tool": "Pickaxe"
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Pickaxe"]
     },
 
     "Mangrove Log": {
         "description": "",
-        "tool": "Axe"
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Axe"]
     },
 
     "Mangrove Planks": {
         "description": "",
-        "tool": "Axe"
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
     },
 
     "Mangrove Slab": {
         "description": "",
-        "tool": "Axe"
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
     },
 
     "Mangrove Stairs": {
         "description": "",
-        "tool": "Axe"
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
     },
 
     "Oak Leaves": {
         "description": "",
-        "tool": "Axe"
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Axe"]
     },
 
     "Oak Log": {
         "description": "",
-        "tool": "Axe"
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Axe"]
     },
 
     "Oak Planks": {
         "description": "",
-        "tool": "Axe"
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
     },
 
     "Oak Slab": {
         "description": "",
-        "tool": "Axe"
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
     },
 
     "Oak Stairs": {
         "description": "",
-        "tool": "Axe"
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
     },
 
     "Ruby Block": {
         "description": "",
-        "tool": "Pickaxe"
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
     },
 
     "Sapphire Ore": {
         "description": "",
-        "tool": "Pickaxe"
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Pickaxe"]
     },
 
     "Stone Bricks": {
         "description": "",
-        "tool": "Pickaxe"
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
     },
 
     "Stone Brick Slab": {
         "description": "",
-        "tool": "Pickaxe"
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
     },
 
     "Stone Brick Stairs": {
         "description": "",
-        "tool": "Pickaxe"
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
     }
 }
 
