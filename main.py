@@ -260,7 +260,7 @@ class ZoomButton(ui.Button):
         )
         self.interaction = interaction
         self.embed = embed
-        self.description = embed.description
+        self.description = embed.fields[0]
 
     @ui.button(
         emoji = "🔍",
@@ -273,7 +273,7 @@ class ZoomButton(ui.Button):
             if self.style == discord.ButtonStyle.gray:
                 self.style = discord.ButtonStyle.green
 
-                embed.description = None
+                embed.clear_fields()
                 embed.set_image(
                     url = embed.thumbnail.url
                 )
@@ -288,7 +288,11 @@ class ZoomButton(ui.Button):
             else:
                 self.style = discord.ButtonStyle.gray
 
-                embed.description = self.description
+                embed.add_field(
+                    name = self.description.name,
+                    value = self.description.value,
+                    inline = self.description.inline
+                )
                 embed.set_thumbnail(
                     url = embed.image.url
                 )
