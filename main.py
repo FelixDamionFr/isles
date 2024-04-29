@@ -69,9 +69,9 @@ CategoryType = {
 }
 
 ToolType = {
-    "Pickaxe": "Pickaxe", # ToolType["Pickaxe"]
-    "Axe": "Axe", # ToolType["Axe"]
-    "Shovel": "Shovel" # ToolType["Shovel"]
+    "Axe": "<:Tool_Axe_1:1234343714852438047><:Tool_Axe_2:1234343717049991198><:Tool_Axe_3:1234343712482660463>", # ToolType["Axe"]
+    "Pickaxe": "<:Tool_Pickaxe_1:1234343929458069625><:Tool_Pickaxe_2:1234343931353763903><:Tool_Pickaxe_3:1234343934688235652><:Tool_Pickaxe_4:1234343927411245117>", # ToolType["Pickaxe"]
+    "Shovel": "<:Tool_Shovel1:1234344053018202142><:Tool_Shovel2:1234344055207493684><:Tool_Shovel_3:1234344047234121768><:Tool_Shovel4:1234344050501353522>" # ToolType["Shovel"]
 }
 
 # Lists & Dictionaries
