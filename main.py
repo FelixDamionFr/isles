@@ -235,7 +235,7 @@ block_dict = {
     }
 }
 
-category_select = []
+category_select = [discord.SelectOption(label = category) for category in CategoryType]
 
 changelog_list = []
 
@@ -261,6 +261,8 @@ class ZoomButton(ui.Button):
         self.interaction = interaction
         self.embed = embed
         self.description = embed.fields[0]
+        self.category = embed.fields[1]
+        self.tool = embed.fields[2]
 
     @ui.button(
         emoji = "🔍",
@@ -292,6 +294,16 @@ class ZoomButton(ui.Button):
                     name = self.description.name,
                     value = self.description.value,
                     inline = self.description.inline
+                )
+                embed.add_field(
+                    name = self.category.name,
+                    value = self.category.value,
+                    inline = self.category.inline
+                )
+                embed.add_field(
+                    name = self.tool.name,
+                    value = self.tool.value,
+                    inline = self.tool.inline
                 )
                 embed.set_thumbnail(
                     url = embed.image.url
@@ -374,22 +386,27 @@ async def block(interaction:discord.Interaction, block:block_list):
         file = file
     )
 
+    description = "Alta Regna a \"Perforo-ars Caelummassa\" et \"Itercaudices Insulae\" imitantur. Ludi quadratorum sunt, ubi ludificatores in sua insula flante privata, paucis facultatibus, incipiunt."
+
     embed = discord.Embed(
         title = block,
         color = 0x2b2d31
     )
-    if "AEIOU".find(block_dict.get(block)['tool'][0]):
-        embed.add_field(
-            name = "Tool",
-            value = f"A **{block_dict.get(block)['tool'].lower()}** is the appropriate tool to break {block}.",
-            inline = False
-        )
-    else:
-        embed.add_field(
-            name = "Tool",
-            value = f"An **{block_dict.get(block)['tool'].lower()}** is the appropriate tool to break {block}.",
-            inline = False
-        )
+    embed.add_field(
+        name = "Description",
+        value = block_dict.get(block)['description'] or description,
+        inline = False
+    )
+    embed.add_field(
+        name = "Category",
+        value = f"```\n{block_dict.get(block)['category']}\n```",
+        inline = False
+    )
+    embed.add_field(
+        name = "Tool",
+        value = block_dict.get(block)['tool'],
+        inline = False
+    )
 
     embed.set_author(
         name = game_name,
