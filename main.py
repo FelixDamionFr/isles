@@ -399,7 +399,7 @@ async def block(interaction:discord.Interaction, block:block_list):
     )
     embed.add_field(
         name = "Category",
-        value = f"```\n{block_dict.get(block)['category']}\n```",
+        value = f"```{block_dict.get(block)['category']}```",
         inline = False
     )
     embed.add_field(
