@@ -386,7 +386,7 @@ async def block(interaction:discord.Interaction, block:block_list):
         file = file
     )
 
-    description = "Alta Regna a \"Perforo-ars Caelummassa\" et \"Itercaudices Insulae\" imitantur. Ludi quadratorum sunt, ubi ludificatores in sua insula flante privata, paucis facultatibus, incipiunt."
+    description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 
     embed = discord.Embed(
         title = block,
