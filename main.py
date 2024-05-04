@@ -109,6 +109,12 @@ block_dict = {
         "tool": ToolType["Pickaxe"]
     },
 
+    "Coal Block": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
     "Cobalt Block": {
         "description": "",
         "category": CategoryType["Building Blocks"],
