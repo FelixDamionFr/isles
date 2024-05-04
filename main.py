@@ -77,6 +77,7 @@ ToolType = {
 # Lists & Dictionaries
 block_list = typing.Literal[
     "Bluestone Block",
+    "Coal Block",
     "Cobalt Block",
     "Cobblestone",
     "Diamond Block",
