@@ -85,6 +85,7 @@ block_list = typing.Literal[
     "Gold Ore",
     "Grass Block",
     "Iron Ore",
+    "Mangrove Door",
     "Mangrove Log",
     "Mangrove Planks",
     "Mangrove Slab",
@@ -99,7 +100,8 @@ block_list = typing.Literal[
     "Stone Brick Slab",
     "Stone Brick Stairs",
     "Stone Brick Wall",
-    "Stone Bricks"
+    "Stone Bricks",
+    "Torch"
 ]
 
 block_dict = {
@@ -155,6 +157,12 @@ block_dict = {
         "description": "",
         "category": CategoryType["Natural Blocks"],
         "tool": ToolType["Pickaxe"]
+    },
+
+    "Mangrove Door": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
     },
 
     "Mangrove Log": {
@@ -239,6 +247,12 @@ block_dict = {
         "description": "",
         "category": CategoryType["Building Blocks"],
         "tool": ToolType["Pickaxe"]
+    },
+
+    "Torch": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
     }
 }
 
