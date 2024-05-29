@@ -34,8 +34,8 @@ class Bot(commands.Bot):
 
         await bot.change_presence(
             activity = discord.Activity(
-                name = f"High Realms Forest Music",
-                type = discord.ActivityType.listening
+                name = game_name,
+                type = discord.ActivityType.playing
             ),
             status = discord.Status.dnd
         )
