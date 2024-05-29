@@ -75,34 +75,7 @@ ToolType = {
 }
 
 # Lists & Dictionaries
-block_list = typing.Literal[
-    "Bluestone Block",
-    "Coal Block",
-    "Cobalt Block",
-    "Cobblestone",
-    "Diamond Block",
-    "Dirt",
-    "Gold Ore",
-    "Grass Block",
-    "Iron Ore",
-    "Mangrove Door",
-    "Mangrove Log",
-    "Mangrove Planks",
-    "Mangrove Slab",
-    "Mangrove Stairs",
-    "Oak Leaves",
-    "Oak Log",
-    "Oak Planks",
-    "Oak Slab",
-    "Oak Stairs",
-    "Ruby Block",
-    "Sapphire Ore",
-    "Stone Brick Slab",
-    "Stone Brick Stairs",
-    "Stone Brick Wall",
-    "Stone Bricks",
-    "Torch"
-]
+category_select = [discord.SelectOption(label = category) for category in CategoryType]
 
 block_dict = {
     "Bluestone Block": {
@@ -256,8 +229,6 @@ block_dict = {
     }
 }
 
-category_select = [discord.SelectOption(label = category) for category in CategoryType]
-
 changelog_list = []
 
 # Classes
@@ -397,11 +368,11 @@ async def ping(interaction:discord.Interaction):
     per = 10,
     key = lambda i: (i.guild_id, i.user.id)
 )
-async def block(interaction:discord.Interaction, block:block_list):
+async def block(interaction:discord.Interaction, block:str):
     id = block.replace(' ', '_')
     channel = bot.get_channel(1231482799987625986)
     file = discord.File(
-        fp = f'Renders/HighRealms Block {id} 1000x1000.png'
+        fp = f'Renders/HighRealms Block {id}.png'
     )
     message = await channel.send(
         file = file
@@ -446,6 +417,12 @@ async def block(interaction:discord.Interaction, block:block_list):
         embed = embed,
         view = view
     )
+
+@block.autocomplete(
+    name = 'block'
+)
+async def autocomplete_callback(interaction:discord.Interaction, current:str):
+    return [app_commands.Choice(name=choice, value=choice) for choice in block_dict if current.lower() in choice.lower()][:25]
 
 # Command: /changelog [date]
 @bot.tree.command(
