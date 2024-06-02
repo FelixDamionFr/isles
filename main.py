@@ -90,6 +90,12 @@ block_dict = {
         "tool": ToolType["Pickaxe"]
     },
 
+    "Coal Ore": {
+        "description": "",
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
     "Cobalt Block": {
         "description": "",
         "category": CategoryType["Building Blocks"],
@@ -199,6 +205,12 @@ block_dict = {
     },
 
     "Sapphire Ore": {
+        "description": "",
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
+    "Slate": {
         "description": "",
         "category": CategoryType["Natural Blocks"],
         "tool": ToolType["Pickaxe"]
