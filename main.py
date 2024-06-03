@@ -37,7 +37,7 @@ class Bot(commands.Bot):
                 name = game_name,
                 type = discord.ActivityType.playing
             ),
-            status = discord.Status.dnd
+            status = discord.Status.online
         )
 
     async def on_error(self, error) -> None:
@@ -144,6 +144,12 @@ block_dict = {
         "tool": ToolType["Axe"]
     },
 
+    "Mangrove Leaves": {
+        "description": "",
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
     "Mangrove Log": {
         "description": "",
         "category": CategoryType["Natural Blocks"],
@@ -216,12 +222,6 @@ block_dict = {
         "tool": ToolType["Pickaxe"]
     },
 
-    "Stone Bricks": {
-        "description": "",
-        "category": CategoryType["Building Blocks"],
-        "tool": ToolType["Pickaxe"]
-    },
-
     "Stone Brick Slab": {
         "description": "",
         "category": CategoryType["Building Blocks"],
@@ -229,6 +229,18 @@ block_dict = {
     },
 
     "Stone Brick Stairs": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
+    "Stone Brick Wall": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
+    "Stone Bricks": {
         "description": "",
         "category": CategoryType["Building Blocks"],
         "tool": ToolType["Pickaxe"]
