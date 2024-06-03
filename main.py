@@ -32,14 +32,6 @@ class Bot(commands.Bot):
         print(f"Synced slash commands for {self.user} with prefix /")
         print(f"Invite Link: https://discord.com/api/oauth2/authorize?client_id={bot.user.id}&permissions=412317240384&scope=bot")
 
-        await bot.change_presence(
-            activity = discord.Activity(
-                name = game_name,
-                type = discord.ActivityType.playing
-            ),
-            status = discord.Status.online
-        )
-
     async def on_error(self, error) -> None:
         print(error)
 
