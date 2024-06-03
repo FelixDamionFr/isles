@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Functions
 @app.route('/')
 def index():
-    return "I guess the bot's running"
+    return "I think the bot might be running right now, like no joke"
 
 def run():
     app.run(
