@@ -30,7 +30,7 @@ class Bot(commands.Bot):
 
     async def on_ready(self):
         print(f"Synced slash commands for {self.user} with prefix /")
-        print(f"Invite Link: https://discord.com/api/oauth2/authorize?client_id={bot.user.id}&permissions=412317240384&scope=bot")
+        print(f"Invite Link: https://discord.com/api/oauth2/authorize?client_id={bot.user.id}")
 
         await bot.change_presence(
             activity = discord.Activity(
