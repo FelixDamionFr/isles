@@ -62,10 +62,7 @@ game_icon = "https://media.discordapp.net/attachments/1180618436972396545/123082
 # Types
 CategoryType = {
     "Building Blocks": "Building Blocks", # CategoryType["Building Blocks"]
-    "Colored Blocks": "Colored Blocks", # CategoryType["Colored Blocks"]
     "Natural Blocks": "Natural Blocks", # CategoryType["Natural Blocks"]
-    "Functional Blocks": "Functional Blocks", # CategoryType["Functional Blocks"]
-    "Bluestone Blocks": "Bluestone Blocks" # CategoryType["Bluestone Blocks"]
 }
 
 ToolType = {
@@ -75,15 +72,7 @@ ToolType = {
 }
 
 # Lists & Dictionaries
-category_select = [discord.SelectOption(label = category) for category in CategoryType]
-
 block_dict = {
-    "Bluestone Block": {
-        "description": "",
-        "category": CategoryType["Bluestone Blocks"],
-        "tool": ToolType["Pickaxe"]
-    },
-
     "Coal Block": {
         "description": "",
         "category": CategoryType["Building Blocks"],
@@ -497,6 +486,7 @@ async def changelog(interaction:discord.Interaction, update:str = None):
     name = 'update'
 )
 async def autocomplete_callback(interaction:discord.Interaction, current:str):
+    await asyncio.sleep(0.2)
     return []
 
 # Error: /ping
