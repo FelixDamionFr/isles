@@ -32,6 +32,14 @@ class Bot(commands.Bot):
         print(f"Synced slash commands for {self.user} with prefix /")
         print(f"Invite Link: https://discord.com/api/oauth2/authorize?client_id={bot.user.id}&permissions=412317240384&scope=bot")
 
+        await bot.change_presence(
+            activity = discord.Activity(
+                name = game_name,
+                type = discord.ActivityType.playing
+            ),
+            status = discord.Status.online
+        )
+
     async def on_error(self, error) -> None:
         print(error)
 
@@ -438,6 +446,7 @@ async def block(interaction:discord.Interaction, block:str):
     name = 'block'
 )
 async def autocomplete_callback(interaction:discord.Interaction, current:str):
+    await asyncio.sleep(0.2)
     return [app_commands.Choice(name=choice, value=choice) for choice in block_dict if current.lower() in choice.lower()][:25]
 
 # Command: /changelog [date]
@@ -488,13 +497,7 @@ async def changelog(interaction:discord.Interaction, update:str = None):
     name = 'update'
 )
 async def autocomplete_callback(interaction:discord.Interaction, current:str):
-    list = []
-    for update in changelog_list:
-        list.append(app_commands.Choice(
-            name = update,
-            value = update
-        ))
-    return list
+    return []
 
 # Error: /ping
 @ping.error
