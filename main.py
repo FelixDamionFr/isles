@@ -44,9 +44,7 @@ class Bot(commands.Bot):
         print(error)
 
     def uptime(self):
-        current_time = time.time()
-        difference = int(round(current_time - self.start_time))
-        uptime = datetime.timedelta(seconds = difference)
+        uptime = datetime.timedelta(seconds = int(round(time.time() - self.start_time)))
         return uptime
 
 # Variables
