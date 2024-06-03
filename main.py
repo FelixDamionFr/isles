@@ -37,7 +37,7 @@ class Bot(commands.Bot):
                 name = game_name,
                 type = discord.ActivityType.playing
             ),
-            status = discord.Status.online
+            status = discord.Status.idle
         )
 
     async def on_error(self, error) -> None:
