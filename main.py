@@ -1,15 +1,18 @@
 # Libraries
-import os
 import discord
-import datetime
-import time
-import asyncio
-import random
-import typing
-
+from discord import app_commands
 from discord.ext import commands
 from discord import ui
-from discord import app_commands
+
+import aiohttp
+import sqlite3
+
+import asyncio
+import datetime
+import os
+import random
+import time
+import typing
 
 from keep_alive import keep_alive
 keep_alive()
@@ -280,7 +283,8 @@ class ZoomView(ui.View):
 
     async def on_timeout(self):
         for child in self.children:
-            child.disabled = True
+            if isinstance(item, ui.Button):
+                child.disabled = True
         await self.interaction.edit_original_response(
             view = self
         )
