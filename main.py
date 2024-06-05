@@ -282,9 +282,10 @@ class ZoomView(ui.View):
         self.interaction = interaction
 
     async def on_timeout(self):
-        for child in self.children:
+        for item in self.children:
             if isinstance(item, ui.Button):
-                child.disabled = True
+                item.disabled = True
+
         await self.interaction.edit_original_response(
             view = self
         )
