@@ -71,6 +71,30 @@ ToolType = {
 
 # Lists & Dictionaries
 block_dict = {
+    "Birch Planks": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Birch Slab": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Birch Stairs": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Chain": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
     "Coal Block": {
         "description": "",
         "category": CategoryType["Building Blocks"],
@@ -204,6 +228,12 @@ block_dict = {
     },
 
     "Slate": {
+        "description": "",
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
+    "Stone": {
         "description": "",
         "category": CategoryType["Natural Blocks"],
         "tool": ToolType["Pickaxe"]
