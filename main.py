@@ -468,7 +468,7 @@ async def block(interaction:discord.Interaction, block:str):
     name = 'block'
 )
 async def autocomplete_callback(interaction:discord.Interaction, current:str):
-    await asyncio.sleep(0.2)
+    await interaction.response.defer()
     return [app_commands.Choice(name=choice, value=choice) for choice in block_dict if current.lower() in choice.lower()][:25]
 
 # Command: /changelog [date]
