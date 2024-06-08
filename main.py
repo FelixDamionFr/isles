@@ -273,7 +273,7 @@ block_dict = {
     }
 }
 
-changelog_list = []
+changelog_dict = {}
 
 # Classes
 class ZoomView(ui.View):
@@ -389,6 +389,7 @@ async def ping(interaction:discord.Interaction):
         ephemeral = True
     )
 
+
 # Command: /block <name>
 @bot.tree.command(
     name = "block",
@@ -471,6 +472,7 @@ async def autocomplete_callback(interaction:discord.Interaction, current:str):
     await interaction.response.defer()
     return [app_commands.Choice(name=choice, value=choice) for choice in block_dict if current.lower() in choice.lower()][:25]
 
+
 # Command: /changelog [date]
 @bot.tree.command(
     name = "changelog",
@@ -519,8 +521,8 @@ async def changelog(interaction:discord.Interaction, update:str = None):
     name = 'update'
 )
 async def autocomplete_callback(interaction:discord.Interaction, current:str):
-    await asyncio.sleep(0.2)
-    return []
+    await interaction.response.defer()
+    return changelog_dict
 
 # Error: /ping
 @ping.error
