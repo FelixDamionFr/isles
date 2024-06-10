@@ -230,6 +230,12 @@ block_dict = {
         "tool": ToolType["Pickaxe"]
     },
 
+    "Short Grass": {
+        "description": "",
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Shovel"]
+    },
+
     "Slate": {
         "description": "",
         "category": CategoryType["Natural Blocks"],
