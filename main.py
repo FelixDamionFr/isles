@@ -74,22 +74,40 @@ ToolType = {
 
 # Lists & Dictionaries
 block_dict = {
-    "Birch Planks": {
+    "Ash Leaves": {
+        "description": "",
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Ash Plank": {
         "description": "",
         "category": CategoryType["Building Blocks"],
         "tool": ToolType["Axe"]
     },
 
-    "Birch Slab": {
+    "Ash Slab": {
         "description": "",
         "category": CategoryType["Building Blocks"],
         "tool": ToolType["Axe"]
     },
 
-    "Birch Stairs": {
+    "Ash Stair": {
         "description": "",
         "category": CategoryType["Building Blocks"],
         "tool": ToolType["Axe"]
+    },
+
+    "Ash Vertical Slab": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Bedrock": {
+        "description": "",
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Pickaxe"]
     },
 
     "Chain": {
@@ -116,10 +134,40 @@ block_dict = {
         "tool": ToolType["Pickaxe"]
     },
 
+    "Cobalt Ore": {
+        "description": "",
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
     "Cobblestone": {
         "description": "",
         "category": CategoryType["Building Blocks"],
         "tool": ToolType["Pickaxe"]
+    },
+
+    "Dark Hollow Plank": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Dark Hollow Slab": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Dark Hollow Stair": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Dark Hollow Vertical Slab": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
     },
 
     "Diamond Block": {
@@ -134,13 +182,37 @@ block_dict = {
         "tool": ToolType["Shovel"]
     },
 
+    "Emerald Block": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
+    "Fire Block": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
+    "Gold Block": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
     "Gold Ore": {
         "description": "",
         "category": CategoryType["Natural Blocks"],
         "tool": ToolType["Pickaxe"]
     },
 
-    "Grass Block": {
+    "Grass": {
+        "description": "",
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Shovel"]
+    },
+
+    "Grass Weed": {
         "description": "",
         "category": CategoryType["Natural Blocks"],
         "tool": ToolType["Shovel"]
@@ -152,39 +224,45 @@ block_dict = {
         "tool": ToolType["Pickaxe"]
     },
 
-    "Mangrove Door": {
+    "Mahogany Door": {
         "description": "",
         "category": CategoryType["Building Blocks"],
         "tool": ToolType["Axe"]
     },
 
-    "Mangrove Leaves": {
+    "Mahogany Leaves": {
         "description": "",
         "category": CategoryType["Natural Blocks"],
         "tool": ToolType["Axe"]
     },
 
-    "Mangrove Log": {
+    "Mahogany Plank": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Mahogany Slab": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Mahogany Stair": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Mahogany Vertical Slab": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Mahogany Wood": {
         "description": "",
         "category": CategoryType["Natural Blocks"],
-        "tool": ToolType["Axe"]
-    },
-
-    "Mangrove Planks": {
-        "description": "",
-        "category": CategoryType["Building Blocks"],
-        "tool": ToolType["Axe"]
-    },
-
-    "Mangrove Slab": {
-        "description": "",
-        "category": CategoryType["Building Blocks"],
-        "tool": ToolType["Axe"]
-    },
-
-    "Mangrove Stairs": {
-        "description": "",
-        "category": CategoryType["Building Blocks"],
         "tool": ToolType["Axe"]
     },
 
@@ -194,13 +272,7 @@ block_dict = {
         "tool": ToolType["Axe"]
     },
 
-    "Oak Log": {
-        "description": "",
-        "category": CategoryType["Natural Blocks"],
-        "tool": ToolType["Axe"]
-    },
-
-    "Oak Planks": {
+    "Oak Plank": {
         "description": "",
         "category": CategoryType["Building Blocks"],
         "tool": ToolType["Axe"]
@@ -212,9 +284,21 @@ block_dict = {
         "tool": ToolType["Axe"]
     },
 
-    "Oak Stairs": {
+    "Oak Stair": {
         "description": "",
         "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Oak Vertical Slab": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Oak Wood": {
+        "description": "",
+        "category": CategoryType["Natural Blocks"],
         "tool": ToolType["Axe"]
     },
 
@@ -224,27 +308,21 @@ block_dict = {
         "tool": ToolType["Pickaxe"]
     },
 
-    "Sapphire Ore": {
+    "Steel Block": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
+    "Stone Block": {
         "description": "",
         "category": CategoryType["Natural Blocks"],
         "tool": ToolType["Pickaxe"]
     },
 
-    "Short Grass": {
+    "Stone Brick": {
         "description": "",
-        "category": CategoryType["Natural Blocks"],
-        "tool": ToolType["Shovel"]
-    },
-
-    "Slate": {
-        "description": "",
-        "category": CategoryType["Natural Blocks"],
-        "tool": ToolType["Pickaxe"]
-    },
-
-    "Stone": {
-        "description": "",
-        "category": CategoryType["Natural Blocks"],
+        "category": CategoryType["Building Blocks"],
         "tool": ToolType["Pickaxe"]
     },
 
@@ -254,27 +332,51 @@ block_dict = {
         "tool": ToolType["Pickaxe"]
     },
 
-    "Stone Brick Stairs": {
+    "Stone Brick Stair": {
         "description": "",
         "category": CategoryType["Building Blocks"],
         "tool": ToolType["Pickaxe"]
     },
 
-    "Stone Brick Wall": {
+    "Stone Brick Vertical Slab": {
         "description": "",
         "category": CategoryType["Building Blocks"],
         "tool": ToolType["Pickaxe"]
     },
 
-    "Stone Bricks": {
+    "Stone Slab": {
         "description": "",
         "category": CategoryType["Building Blocks"],
         "tool": ToolType["Pickaxe"]
+    },
+
+    "Stone Stair": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
+    "Stone Vertical Slab": {
+        "description": "",
+        "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Pickaxe"]
+    },
+
+    "Tilled Dirt": {
+        "description": "",
+        "category": CategoryType["Natural Blocks"],
+        "tool": ToolType["Shovel"]
     },
 
     "Torch": {
         "description": "",
         "category": CategoryType["Building Blocks"],
+        "tool": ToolType["Axe"]
+    },
+
+    "Vines": {
+        "description": "",
+        "category": CategoryType["Natural Blocks"],
         "tool": ToolType["Axe"]
     }
 }
